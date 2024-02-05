@@ -13,6 +13,9 @@ endpoint_secret = os.getenv("ENDPOINT_SECRET")
 
 app = Flask(__name__)
 
+@app.route('/')
+def index():
+    return "Hello, World"
 
 @app.route("/webhook", methods=["POST"])
 def webhook():
